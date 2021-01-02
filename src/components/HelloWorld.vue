@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>
+    <!-- <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
@@ -26,15 +26,39 @@
       <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    </ul> -->
+    <!-- <h2>{{name}}</h2> -->
+    <h2 v-text="name"></h2>
   </div>
 </template>
 
 <script>
+// es5
+  // var getName=function(name){
+  //   return name;
+  // }
+
+  // es6
+  // let getName=(name)=>{
+  //   return name
+  // }
+  // let getName=name=>name;
+
+// 条件方法：
+  // if(a){
+  //   b=1
+  // }else b=2;
+  // b=a?1:2;
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data(){
+    return{
+      name:"zhaoxx"
+    }
   }
 }
 </script>
